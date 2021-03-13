@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jowilsonfopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jowilsonfopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jowilsonfopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jowilsonfopipelinesjavascriptdocker 
+          image: testecontainers.azurecr.io/jowilsonfopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
